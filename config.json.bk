@@ -1,0 +1,57 @@
+{
+    "devices": {
+        "1": {
+            "devicename": "3 12"
+        }
+    },
+    "keys": {
+        "2": {
+            "msg_channel": 0,
+            "msg_type": "control_change",
+            "msgNoC": 1,
+            "msgVoV": 6,
+            "input_type": "fader",
+            "scale_low": -3,
+            "scale_high": 3,
+            "action": "{\"request-type\": \"SetSourceFilterSettings\", \"message-id\" : \"1\",\"sourceName\" : \"Display Capture 2\", \"filterName\": \"Color Correction\", \"filterSettings\": {\"gamma\": %s}}",
+            "cmd": "Filter/Color Correction - Gamma",
+            "deviceID": 1
+        },
+        "4": {
+            "msg_channel": 0,
+            "msg_type": "control_change",
+            "msgNoC": 3,
+            "msgVoV": 47,
+            "input_type": "fader",
+            "scale_low": 0,
+            "scale_high": 1,
+            "action": "{\"request-type\": \"SetSourceFilterSettings\", \"message-id\" : \"1\",\"sourceName\" : \"Group\", \"filterName\": \"Color Correction\", \"filterSettings\": {\"opacity\": %s}}",
+            "cmd": "Filter/Color Correction - Opacity",
+            "deviceID": 1
+        },
+        "6": {
+            "msg_channel": 0,
+            "msg_type": "control_change",
+            "msgNoC": 2,
+            "msgVoV": 56,
+            "input_type": "fader",
+            "scale_low": -180,
+            "scale_high": 180,
+            "action": "{\"request-type\": \"SetSourceFilterSettings\", \"message-id\" : \"1\",\"sourceName\" : \"Video Capture Device\", \"filterName\": \"Color Correction\", \"filterSettings\": {\"hue_shift\": %s}}",
+            "cmd": "Filter/Color Correction - Hue Shift",
+            "deviceID": 1
+        },
+        "7": {
+            "msg_channel": 0,
+            "msg_type": "control_change",
+            "msgNoC": 0,
+            "msgVoV": 72,
+            "input_type": "fader",
+            "scale_low": -180,
+            "scale_high": 180,
+            "action": "{\"request-type\": \"SetSourceFilterSettings\", \"message-id\" : \"1\",\"sourceName\" : \"ABLogo\", \"filterName\": \"Color Correction\", \"filterSettings\": {\"hue_shift\": %s}}",
+            "cmd": "Filter/Color Correction - Hue Shift",
+            "deviceID": 1
+        }
+    }
+}

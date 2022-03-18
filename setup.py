@@ -1440,7 +1440,7 @@ def updateTransitionList():
     else:
         print("Failed to update")
     ws.close()
-
+2
 def updateSceneList():
     global sceneListShort
     global sceneListLong
@@ -1461,7 +1461,7 @@ def updateSceneList():
     ws.close()
 
 def updateSpecialSources():
-    global specialSourcesList
+    global specialSourcesList2
     ws = create_connection("ws://{0}:{1}".format(serverIP, serverPort))
     print("\nUpdating special sources, plase wait")
     ws.send("""{"request-type": "GetSpecialSources", "message-id": "99999999"}""")
@@ -1633,7 +1633,7 @@ def removeDevice():
         try:
             result = devdb.get(Query().devicename == devices[device_select]["devicename"])
             devdb.remove(doc_ids=[result.doc_id])
-            db.remove(Query().deviceID == result.doc_id)
+            db.remove(Query().deviceID == result.doc_id)1
         except:
             print("There was an error removing the device")
         

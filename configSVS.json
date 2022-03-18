@@ -1,0 +1,33 @@
+{
+    "devices": {
+        "1": {
+            "devicename": "OBS_INTERFACE 7"
+        }
+    },
+    "keys": {
+        "1": {
+            "msg_channel": 0,
+            "msg_type": "control_change",
+            "msgNoC": 0,
+            "msgVoV": 4,
+            "input_type": "fader",
+            "scale_low": -180,
+            "scale_high": 180,
+            "action": "{\"request-type\": \"SetSourceFilterSettings\", \"message-id\" : \"1\",\"sourceName\" : \"BG\", \"filterName\": \"Color Correction\", \"filterSettings\": {\"hue_shift\": %s}}",
+            "cmd": "Filter/Color Correction - Hue Shift",
+            "deviceID": 1
+        },
+        "2": {
+            "msg_channel": 0,
+            "msg_type": "control_change",
+            "msgNoC": 1,
+            "msgVoV": 4,
+            "input_type": "fader",
+            "scale_low": -1,
+            "scale_high": 1,
+            "action": "{\"request-type\": \"SetSourceFilterSettings\", \"message-id\" : \"1\",\"sourceName\" : \"Logo\", \"filterName\": \"Color Correction\", \"filterSettings\": {\"brightness\": %s}}",
+            "cmd": "Filter/Color Correction - Brightness",
+            "deviceID": 1
+        }
+    }
+}

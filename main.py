@@ -428,7 +428,7 @@ class MidiHandler:
 
     def sceneChanged(self, event_type, scene_name):
         self.log.debug("Scene changed, event: %s, name: %s" % (event_type, scene_name))
-        # only buttons can change the scene, so we can limit our search to those
+        # on ly buttons can change the scene, so we can limit our search to those
         results = self.mappingdb.getmany(self.mappingdb.find('input_type == "button" and bidirectional == 1'))
         if not results:
             return
@@ -455,9 +455,9 @@ class MidiHandler:
         if isinstance(error, (KeyboardInterrupt, SystemExit)):
             self.log.info("Keyboard interrupt received, gracefully exiting...")
         else:
-            self.log.error("Websocket error: %" % str(error))
-
-    def handle_obs_close(self, ws):
+                 self.log.error("Websocket error: %" % str(error))
+    
+    def handle_obiks_close(self, ws):
         self.log.error("OBS has disconnected, timed out or isn't running")
         self.log.error("Please reopen OBS and restart the script")
         self.close(teardown=True)
